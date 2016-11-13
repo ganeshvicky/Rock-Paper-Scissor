@@ -1,0 +1,75 @@
+import java.util.Scanner;
+import java.util.Random;
+ 
+public class apples {
+    public static void main(String args[]){
+       
+        Scanner input = new Scanner(System.in);
+        Random number = new Random();
+       
+        String rps[] = {"rock", "paper", "scissor"};
+        String player;
+        String ai;
+        int rand, pscore=0, aiscore=0;
+       
+        while(1 < 2){
+        System.out.println("Take your pick \nrock \npaper \nscissor");
+        player = input.nextLine();
+       
+        rand = number.nextInt(3);
+        ai = rps[rand];
+       
+        if(player.equals(ai)){
+            pscore+=0;
+            aiscore+=0;
+            System.out.println("Your opponent chose " + ai + "\tYour score= "+ pscore + "\tOpponents score = "+aiscore);
+            System.out.print("\n");
+            continue;
+        }else{
+            if(player.equals(rps[0]) && ai.equals(rps[1])){
+                aiscore+=1;
+                pscore+=0;
+                System.out.println("Your opponent chose " + ai + "\tYour score= "+ pscore + "\tOpponents score = "+aiscore);
+                System.out.print("\n");
+                continue;
+            }else if(player.equals(rps[0]) && ai.equals(rps[2])){
+                pscore+=1;
+                aiscore+=0;
+                System.out.println("Your opponent chose " + ai + "\tYour score= "+ pscore + "\tOpponents score = "+aiscore);
+                System.out.print("\n");
+                continue;
+            }else if(player.equals(rps[1]) && ai.equals(rps[0])){
+                pscore+=1;
+                aiscore+=0;
+                System.out.println("Your opponent chose " + ai + "\tYour score= "+ pscore + "\tOpponents score = "+aiscore);
+                System.out.print("\n");
+                continue;
+            }else if(player.equals(rps[1]) && ai.equals(rps[2])){
+                aiscore+=1;
+                pscore+=0;
+                System.out.println("Your opponent chose " + ai + "\tYour score= "+ pscore + "\tOpponents score = "+aiscore);
+                System.out.print("\n");
+                continue;
+            }else if(player.equals(rps[2]) && ai.equals(rps[0])){
+                aiscore+=1;
+                pscore+=0;
+                System.out.println("Your opponent chose " + ai + "\tYour score= "+ pscore + "\tOpponents score = "+aiscore);
+                System.out.print("\n");
+                continue;
+            }else if(player.equals(rps[2]) && ai.equals(rps[1])){
+                aiscore+=0;
+                pscore+=1;
+                System.out.println("Your opponent chose " + ai + "\tYour score= "+ pscore + "\tOpponents score = "+aiscore);
+                System.out.print("\n");
+                continue;
+            }else{
+                System.out.println("Enter a valid choice");
+                System.out.print("\n");
+                continue;
+            }
+        }
+        }
+       
+       
+    }
+}
